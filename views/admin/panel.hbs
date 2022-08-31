@@ -1,0 +1,38 @@
+<nav>
+    <ul>
+        <li class="panel-li"> <a href="#general">Modificar productos</a></li>
+        <li class="panel-li"> <a href="#gallery">Modificar Galeria</a></li>
+        <button id="login"> <a href="/logout"><i class='bx bx-log-in'></i></a></button>
+    </ul>
+</nav>
+
+<section class="admin_actions">
+
+    <section class="panel-general" id="general">
+
+        {{#each productos}}
+            <div class="product-card">
+            <img src="{{image}}" alt="">
+            <div class="product-info">
+                <p>ID: <span>{{id}}</span></p>
+                <p>Nombre del producto: <span>{{nombre}}</span> </p>
+                <p>Descripción: <span>{{descripcion}}</span> </p>
+                <p>Precio: <span>${{precio}}</span> </p>
+            </div>
+            <div class="acc-icons">
+                <a href="/admin/panel/modificar/{{id}}"><i class='bx bx-edit'></i></a>
+                <a href="/admin/panel/eliminar/{{id}}"><i class='bx bx-folder-minus'></i></a>
+            </div>
+        </div>
+        {{/each}}
+    </section>
+
+    <div class="agg-prod">
+        <h3>Agregar productos</h3>
+        <a href="/admin/panel/agregar"><i class='bx bxs-plus-square'></i></a>
+    </div>
+        
+
+
+    <section class="modificar_precios" id="prices"></section>
+</section>

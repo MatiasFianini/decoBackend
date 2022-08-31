@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel='stylesheet' href='/stylesheets/estilosModificar.css'/>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="header_content">
+            <h2 class="header-title">Art Deco Experience</h2>
+            <img src="https://img.icons8.com/stickers/100/000000/folder-invoices.png" alt="" class="header-img">
+        </div>
+        {{#if persona}}
+        <span class="logged">Hola {{persona}}</span>
+        {{else}}
+         <span class="logged">No loggeado</span>
+        {{/if}}
+    </header>
+
+
+    {{{body}}}
+
+    <footer>
+        Website creado por <a href="https://matiasfianini.github.io" rel="noopener" target="_blank">MatiasF</a>
+    </footer>
+</body>
+
+</html>

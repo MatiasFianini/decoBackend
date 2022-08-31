@@ -1,0 +1,23 @@
+<section class="login">
+    <div class="login_container">
+        <div class="login_text">
+            <h1>Login</h1>
+            <p>Verificarse como administrador</p>
+        </div>
+        <div class="login_form">
+            <form action="/admin/login" method="post">
+                <input type="text" name="usuario" required placeholder="Introducir usuario">
+                <input type="password" name="password" required placeholder="Introducir contraseña">
+                <button>Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    {{#if error}}
+        <div class="error-box">
+            <p class="error-msg">Usuario/Contraseña erróneos</p>
+        </div>
+        
+    {{/if}}  
+
+</section>

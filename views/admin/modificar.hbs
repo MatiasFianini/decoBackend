@@ -1,0 +1,40 @@
+<section class="modificar_producto">
+    <article class="producto_sin--modificar">
+        <h2>Producto a modificar:</h2>
+        <img src="{{producto.image}}" alt="">
+        <div>
+            <h3>{{producto.nombre}}</h3>
+            <p>{{producto.descripcion}}</p>
+            <span>${{producto.precio}}</span>
+        </div>
+
+    </article>
+
+    <article>
+        <div class="login_container log-cont2">
+            <div class="login_text">
+                <h1>Modificar producto</h1>
+            </div>
+            <div class="login_form">
+                <form action="/admin/panel/modificar" method="post">
+
+                    <input type="hidden" value="{{producto.id}}" name="id">
+
+                    <input type="text" name="nombre" placeholder="Nombre" value="{{producto.nombre}}">
+                    <textarea type="text" name="descripcion" placeholder="Descripción">{{producto.descripcion}}</textarea>
+                    <input type="text" name="image"  placeholder="Imagen (link)" value="{{producto.image}}">
+                    <input type="number" name="precio" min="1" placeholder="Precio" value="{{producto.precio}}">
+                    <button style="background-color: #FFDF74;">Guardar</button>
+                </form>
+            </div>
+        </div>
+
+        {{#if error}}
+        <div class="error-box">
+            <p class="error-msg">{{message}}</p>
+        </div>
+
+        {{/if}}
+    </article>
+
+</section>

@@ -1,0 +1,24 @@
+<section class="login">
+    <div class="login_container log-cont2">
+        <div class="login_text">
+            <h1>Agregar producto</h1>
+        </div>
+        <div class="login_form">
+            <form action="/admin/panel/agregar" method="post">
+                <input type="text" name="nombre" required placeholder="Nombre">
+                <textarea type="text" name="descripcion" required placeholder="Descripción"></textarea>
+                <input type="text" name="image" required placeholder="Imagen (link)">
+                <input type="number" name="precio" min="1" required placeholder="Precio">
+                <button  style="background-color: #FFDF74;">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    {{#if error}}
+        <div class="error-box">
+            <p class="error-msg">{{message}}</p>
+        </div>
+        
+    {{/if}}  
+
+</section>
